@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TML - homepage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+	<script src="/js/javascript-rating.js"></script>
+	<link rel="stylesheet" href="/css/normalize.min.css">
+	<link rel="stylesheet" href="/css/fonts.css">
+	<link rel="stylesheet" href="/css/theme-style.css">
+	<link rel="stylesheet" href="/css/adaptive.css">
+	<script src="/js/modals/modernizr.custom.js"></script>
+</head>
+<body>
+	<div class="md-modal md-effect-1" id="refill-pay">
+		<div class="md-content">
+			<div class="small-payment-box">
+				<div class="head">
+					<h3>Пополнение счета</h3>
+				</div>
+				<div class="body">
+					<div class="form-group mw sm m-auto">
+						<label for="sum-pay">Введите сумму</label>
+						<div class="input-with-icon">
+							<i class="dw dw-file"></i>
+							<input type="text" class="form-control" id="sum-pay" placeholder="15 000 сум">
+						</div>
+					</div>
+					<div class="text-center">
+						<small class="d-block mb-1">Выберите способ оплаты</small>
+						<nav class="choose-payment">
+							<ul>
+								<li><button><img src="/img/payme.png" alt=""></button></li>
+								<li><button><img src="/img/click.png" alt=""></button></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer">
+					<div class="btn-group vertical text-center">
+						<button class="btn btn-success btn-padding">Оплатить</button>
+						<button class="btn btn-sm link gray-t btn-padding md-close">Отмена</button>
+					</div>
+				</div>
+				<button class="close-modal-button md-close"><i class="dw dw-close"></i></button>
+			</div>
+		</div>
+	</div>
+	<div class="md-modal md-effect-1" id="add-comment">
+		<div class="md-content">
+			<div class="small-payment-box">
+				<div class="head">
+					<h3>Добавить отзыв</h3>
+				</div>
+				<div class="body">
+					<div class="text-center mb-1-5">
+						<small class="d-block mb-1 text-18-29">Оцените:</small>
+						<img src="/img/rates-comment.png" alt="">
+					</div>
+					<div class="form-group">
+						<label for="review-input">Введите отзыв <span class="gray-t">(не обязательно)</span></label>
+						<textarea name="review-input" id="review-input" cols="30" rows="3" class="form-control"></textarea>
+					</div>
+				</div>
+				<div class="footer">
+					<button class="btn btn-success btn-padding">Добавить</button>
+				</div>
+				<button class="close-modal-button md-close"><i class="dw dw-close"></i></button>
+			</div>
+		</div>
+	</div>
+	<aside class="mobile-sidebar" id="get-sidebar">
+		<nav class="mobile-navigation">
+			<ul>
+				<li><a href="#">Услуги</a></li>
+				<li><a href="portal.html">О портале</a></li>
+				<li><a href="contact.html">Контакты</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="company.html">О компании</a></li>
+			</ul>
+		</nav>
+		<button class="sidebar-close"><i class="dw dw-close"></i></button>
+	</aside>
+	<div>
+		<header id="main-header" class="main-header">
+			<div class="body">
+				<div class="container">
+					<div class="flex-side space">
+						<div class="left-side">
+							<div class="main-logo flex-side">
+								<button class="mobile-button visible-xs visible-sm visible-md" id="mobile-button">
+									<span>
+										<span></span>
+										<span></span>
+										<span></span>
+									</span>
+								</button>
+								<a href="/">
+									<strong>D&D</strong>
+									<span class="description hidden-sm hidden-xs hidden-md">Перевозка грузов <br/>по всему миру</span>
+								</a>
+							</div>
+						</div>
+						<div class="right-side flex-side">
+							<nav class="main-navigation hidden-md hidden-sm hidden-xs">
+								<ul>
+									<li><a href="#">Услуги</a></li>
+									<li><a href="portal.html">О портале</a></li>
+									<li><a href="contact.html">Контакты</a></li>
+									<li><a href="faq.html">FAQ</a></li>
+									<li><a href="company.html">О компании</a></li>
+								</ul>
+							</nav>
+							<div class="user-ballance">
+								<a href="/cabinet/profile/owner-view.html">
+									<span class="icon-side">
+										<i class="dw dw-person"></i>
+									</span>
+									<span class="content-side">
+										<small>Профиль ID: 15743</small>
+										<strong>Баланс: <span id="user-ballance-field">25 000</span></strong>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+	<section class="cabinet-section">
+		<div class="container">
+			<div class="flex-side top">
+								<aside class="cabinet-sidebar hidden-md hidden-sm hidden-xs">
+									<div class="head">
+										<h2>Мой кабинет</h2>
+										<strong>Баланс: 650 000 сум</strong>
+									</div>
+									<div class="body">
+										<nav class="user-navbar">
+											<ul>
+												<li class="active">
+													<a href="/cabinet/profile/owner-view.html">
+														<i class="dw dw-person-done"></i>
+														<span>О Профиле</span>
+													</a>
+												</li>
+												<li>
+													<a href="/cabinet/aviable-cargo/index.html">
+														<i class="dw dw-shopping-bag"></i>
+														<span>Доступные Грузы</span>
+													</a>
+												</li>
+												<li>
+													<a href="/cabinet/aviable-cars/index.html">
+														<i class="dw dw-car"></i>
+														<span>Доступные Авто</span>
+													</a>
+												</li>
+												<li>
+													<a href="/cabinet/my-cargo/index.html">
+														<i class="dw dw-clipboard"></i>
+														<span>Мои грузы</span>
+													</a>
+												</li>
+												<li>
+													<a href="/cabinet/my-cars/index.html">
+														<i class="dw dw-settings"></i>
+														<span>Мои авто</span>
+													</a>
+												</li>
+												<li>
+													<a href="/cabinet/my-carriage/index.html">
+														<i class="dw dw-checkmark-circle"></i>
+														<span>Мои перевозки</span>
+														<span class="notification"></span>
+													</a>
+												</li>
+												<li>
+													<a href="/cabinet/messages/index.html">
+														<i class="dw dw-message-square"></i>
+														<span>Сообщения</span>
+													</a>
+												</li>
+												<li class="danger">
+													<a href="/">
+														<i class="dw dw-log-out"></i>
+														<span>Выйти</span>
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</aside>
+				<div class="cabinet-content-side fw">
+					<aside class="mobile-cabinet-sidebar visible-md visible-xs visible-sm">
+						<div class="head">
+							<h2>Мой кабинет</h2>
+							<strong>Баланс: 650 000 сум</strong>
+						</div>
+						<div class="body">
+							<nav class="mobile-icon-navbar">
+								<ul>
+									<li class="active">
+										<a href="/cabinet/profile/owner-view.html">
+											<i class="dw dw-person-done"></i>
+										</a>
+									</li>
+									<li>
+										<a href="/cabinet/aviable-cargo/index.html">
+											<i class="dw dw-shopping-bag"></i>
+										</a>
+									</li>
+									<li>
+										<a href="/cabinet/aviable-cars/index.html">
+											<i class="dw dw-car"></i>
+										</a>
+									</li>
+									<li>
+										<a href="/cabinet/my-cargo/index.html">
+											<i class="dw dw-clipboard"></i>
+										</a>
+									</li>
+									<li>
+										<a href="/cabinet/my-cars/index.html">
+											<i class="dw dw-settings"></i>
+										</a>
+									</li>
+									<li>
+										<a href="/cabinet/my-carriage/index.html">
+											<i class="dw dw-checkmark-circle"></i>
+											<span class="notification"></span>
+										</a>
+									</li>
+									<li>
+										<a href="/cabinet/messages/index.html">
+											<i class="dw dw-message-square"></i>
+										</a>
+									</li>
+									<li class="danger">
+										<a href="/">
+											<i class="dw dw-log-out"></i>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</aside>
+					<div class="heading-side mw mdd">
+						<div class="flex-side space">
+							<h2>Добавить груз</h2>
+							<a href="#" class="link danger">Очистить всё</a>
+						</div>
+					</div>
+					<div class="body mb-5">
+						<form action="#" method="POST" id="validate-form">
+							<div class="flex-side horizontal-list list-2 down full mb-1 break-flex-lg break-flex-md break-flex-sm break-flex-xs lg-horizontal-list-null lg-vertical-list-list-1 md-horizontal-list-null md-vertical-list-list-1 sm-horizontal-list-null sm-vertical-list-list-1 xs-horizontal-list-null xs-vertical-list-list-1">
+								<div class="col">
+									<h3>Маршрут</h3>
+									<div class="form-group">
+										<label for="from-to">Откуда</label>
+										<div class="input-with-icon">
+											<i class="dw dw-pin"></i>
+											<input type="text" class="form-control" placeholder="Город, страна" id="from-to" required="required">
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<h3>Описание груза</h3>
+									<div class="form-group">
+										<label for="date-from">Дата</label>
+										<div class="input-with-icon">
+											<i class="dw dw-calendar"></i>
+											<input type="text" class="form-control" placeholder="01.01.2020" id="date-from" required="required">
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="flex-side horizontal-list list-05 top">
+										<div class="form-group xs-140 mb-0">
+											<label for="width">Ширина</label>
+											<div class="input-with-icon">
+												<i class="dw dw-swap"></i>
+												<input type="text" class="form-control" placeholder="99 см" value="99 см" id="width">
+											</div>
+										</div>
+										<div class="form-group xs-140 mb-0">
+											<label for="lenght">Длина</label>
+											<div class="input-with-icon">
+												<i class="dw dw-flip-2"></i>
+												<input type="text" class="form-control" placeholder="66 м³" id="lenght">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="flex-side top horizontal-list list-05 top">
+										<div class="form-group mb-0 xs-140">
+											<label for="height">Высота</label>
+											<div class="input-with-icon">
+												<i class="dw dw-swap rotate"></i>
+												<input type="text" class="form-control" id="height" placeholder="112 см" value="112 см" required="required">
+											</div>
+										</div>
+										<div class="form-group mb-0 xs-140">
+											<label for="weight">Вес</label>
+											<div class="input-with-icon">
+												<i class="dw dw-upload rotate down"></i>
+												<input type="text" class="form-control" id="weight" placeholder="112 см" value="112 см" required="required">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex-side horizontal-list list-2 down full mb-1 break-flex-lg break-flex-md break-flex-sm break-flex-xs lg-horizontal-list-null lg-vertical-list-list-1 md-horizontal-list-null md-vertical-list-list-1 sm-horizontal-list-null sm-vertical-list-list-1 xs-horizontal-list-null xs-vertical-list-list-1">
+								<div class="col">
+									<div class="form-group">
+										<label for="point-to">Куда</label>
+										<div class="input-with-icon">
+											<i class="dw dw-pin"></i>
+											<input type="text" class="form-control" placeholder="Город, страна" id="point-to" required="required">
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="form-group">
+										<label for="cargo-type">Тип груза</label>
+										<div class="input-with-icon">
+											<i class="dw dw-archive"></i>
+											<input type="text" class="form-control" placeholder="66 м³" id="cargo-type" required="required">
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="form-group">
+										<label for="car-type">Тип необходимого авто</label>
+										<div class="input-with-icon">
+											<i class="dw dw-car"></i>
+											<div class="theme-select">
+												<select name="car-type" id="car-type" class="form-control">
+													<option value="Рефрегератор">Рефрегератор</option>
+													<option value="Рефрегератор">Рефрегератор</option>
+													<option value="Рефрегератор">Рефрегератор</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="form-group flex-side mb-05">
+										<div class="theme-checkbox">
+											<input type="checkbox" name="partial-load-allowed" id="partial-load-allowed">
+											<label for="partial-load-allowed"></label>
+										</div>
+										<label for="partial-load-allowed">Догруз разрешен</label>
+									</div>
+								</div>
+							</div>
+							<div class="flex-side horizontal-list list-2 break-flex-lg break-flex-md break-flex-sm break-flex-xs">
+								<div class="form-group fw">
+									<label for="order-description">Описание заказа</label>
+									<div class="input-with-icon">
+										<i class="dw dw-message-circle"></i>
+										<input type="text" class="form-control" placeholder="Описание" required="required">
+									</div>
+								</div>
+								<button class="btn btn-success btn-padding" type="submit">Добавить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		</main>
+		<footer id="main-footer" class="main-footer">
+			<div class="container">
+				<div class="flex-side space break-flex-sm break-flex-xs">
+					<div class="left-side flex-side top break-flex-sm break-flex-xs xs-mb-1-5">
+						<nav class="lang-navbar mr-7 mt-1 md-mr-2">
+							<ul>
+								<li>
+									<a href="#"><i class="dw dw-globe-2"></i> <span>РУ</span></a>
+									<ul>
+										<li><a href="#"><span>EN</span></a></li>
+										<li><a href="#"><span>UZ</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+						<nav class="footer-navbar">
+							<ul>
+								<li><a href="#">Главная</a></li>
+								<li><a href="#">Расчёт стоимости</a></li>
+								<li><a href="#">О компании</a></li>
+							</ul>
+						</nav>
+						<nav class="footer-navbar">
+							<ul>
+								<li><a href="#">О Портале</a></li>
+								<li><a href="#">FAQ</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="right-side">
+						<div class="footer-contact">
+							<h3>Контакты</h3>
+							<nav class="icon-navbar">
+								<ul>
+									<li>
+										<a href="mailto:sample@example.com">
+											<span>sample@example.com</span>
+										</a>
+									</li>
+									<li>
+										<a target="_BLANK" href="https://www.google.com/maps/place/2+%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82+%D0%9D%D0%B0%D0%B2%D0%BE%D0%B8,+%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82,+%D0%A3%D0%B7%D0%B1%D0%B5%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD/@41.3195176,69.2642859,17z/data=!3m1!4b1!4m5!3m4!1s0x38ae8b3e649f4b2b:0x3f3857c4a8a6266c!8m2!3d41.3195176!4d69.2664746">
+											<span>г.Ташкент, ул. Алишера Навои <br/>Шайхонтохурский район 2\52</span>
+										</a>
+									</li>
+									<li>
+										<a href="tel:+998904556874">
+											<span>+998 90 455 68 74</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div class="md-overlay"></div>
+	<!-- Script's side -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="/js/modals/classie.js"></script>
+	<script src="/js/modals/modalEffects.js"></script>
+	<script src="/js/init.js"></script>
+</body>
+</html>

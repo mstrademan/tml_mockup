@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TML - homepage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+	<script src="/js/javascript-rating.js"></script>
+	<link rel="stylesheet" href="/css/normalize.min.css">
+	<link rel="stylesheet" href="/css/fonts.css">
+	<link rel="stylesheet" href="/css/theme-style.css">
+	<link rel="stylesheet" href="/css/adaptive.css">
+	<script src="/js/modals/modernizr.custom.js"></script>
+</head>
+<body>
+	<div class="md-modal md-effect-1" id="refill-pay">
+		<div class="md-content">
+			<div class="small-payment-box">
+				<div class="head">
+					<h3>Пополнение счета</h3>
+				</div>
+				<div class="body">
+					<div class="form-group mw sm m-auto">
+						<label for="sum-pay">Введите сумму</label>
+						<div class="input-with-icon">
+							<i class="dw dw-file"></i>
+							<input type="text" class="form-control" id="sum-pay" placeholder="15 000 сум">
+						</div>
+					</div>
+					<div class="text-center">
+						<small class="d-block mb-1">Выберите способ оплаты</small>
+						<nav class="choose-payment">
+							<ul>
+								<li><button><img src="/img/payme.png" alt=""></button></li>
+								<li><button><img src="/img/click.png" alt=""></button></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer">
+					<div class="btn-group vertical text-center">
+						<button class="btn btn-success btn-padding">Оплатить</button>
+						<button class="btn btn-sm link gray-t btn-padding md-close">Отмена</button>
+					</div>
+				</div>
+				<button class="close-modal-button md-close"><i class="dw dw-close"></i></button>
+			</div>
+		</div>
+	</div>
+	<div class="md-modal md-effect-1" id="add-comment">
+		<div class="md-content">
+			<div class="small-payment-box">
+				<div class="head">
+					<h3>Добавить отзыв</h3>
+				</div>
+				<div class="body">
+					<div class="text-center mb-1-5">
+						<small class="d-block mb-1 text-18-29">Оцените:</small>
+						<img src="/img/rates-comment.png" alt="">
+					</div>
+					<div class="form-group">
+						<label for="review-input">Введите отзыв <span class="gray-t">(не обязательно)</span></label>
+						<textarea name="review-input" id="review-input" cols="30" rows="3" class="form-control"></textarea>
+					</div>
+				</div>
+				<div class="footer">
+					<button class="btn btn-success btn-padding">Добавить</button>
+				</div>
+				<button class="close-modal-button md-close"><i class="dw dw-close"></i></button>
+			</div>
+		</div>
+	</div>
+	<aside class="mobile-sidebar" id="get-sidebar">
+		<nav class="mobile-navigation">
+			<ul>
+				<li><a href="#">Услуги</a></li>
+				<li><a href="portal.html">О портале</a></li>
+				<li><a href="contact.html">Контакты</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="company.html">О компании</a></li>
+			</ul>
+		</nav>
+		<button class="sidebar-close"><i class="dw dw-close"></i></button>
+	</aside>
+	<div>
+		<header id="main-header" class="main-header">
+			<div class="body">
+				<div class="container">
+					<div class="flex-side space">
+						<div class="left-side">
+							<div class="main-logo flex-side">
+								<button class="mobile-button visible-xs visible-sm visible-md" id="mobile-button">
+									<span>
+										<span></span>
+										<span></span>
+										<span></span>
+									</span>
+								</button>
+								<a href="/">
+									<strong>D&D</strong>
+									<span class="description hidden-sm hidden-xs hidden-md">Перевозка грузов <br/>по всему миру</span>
+								</a>
+							</div>
+						</div>
+						<div class="right-side flex-side">
+							<nav class="main-navigation hidden-md hidden-sm hidden-xs">
+								<ul>
+									<li><a href="#">Услуги</a></li>
+									<li><a href="portal.html">О портале</a></li>
+									<li><a href="contact.html">Контакты</a></li>
+									<li><a href="faq.html">FAQ</a></li>
+									<li><a href="company.html">О компании</a></li>
+								</ul>
+							</nav>
+							<div class="user-ballance">
+								<a href="/cabinet/profile/owner-view.html">
+									<span class="icon-side">
+										<i class="dw dw-person"></i>
+									</span>
+									<span class="content-side">
+										<small>Профиль ID: 15743</small>
+										<strong>Баланс: <span id="user-ballance-field">25 000</span></strong>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+	<section class="contact-section padding-section">
+		<div class="container">
+			<h1>Контакты</h1>
+			<div class="well-box lg v-light-gray">
+				<div class="flex-side top horizontal-list list-2 xs-vertical-list-list-1 break-flex-xs break-flex-sm sm-vertical-list-list-1 contact-widget">
+					<div class="col">
+						<div class="item"><span>Телефон:</span> <strong>+998 90 458 88 95</strong></div>
+						<div class="item"><span>e-mail:</span> <a href="mailto:newserever@sample.it">newserever@sample.it</a></div>
+						<div class="item"><span>Адрес:</span> <strong>г.Ташкент, ул. Алишера Навои <br>Шайхонтохурский район 2\52</strong></div>
+						<div class="item"><span>Fax:</span> <strong>+998 90 458 88 95</strong></div>
+					</div>
+					<div class="col">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1059.3271647415547!2d69.29031328868399!3d41.325618562752894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef4ca56d11385%3A0xc12e4d46e57f33fb!2zMjQgQm9kb216b3IgWW8nbGkga28nY2hhc2ksINCi0L7RiNC60LXQvdGCLCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2s!4v1578958923884!5m2!1sru!2s" width="490" height="290" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		</main>
+		<footer id="main-footer" class="main-footer">
+			<div class="container">
+				<div class="flex-side space break-flex-sm break-flex-xs">
+					<div class="left-side flex-side top break-flex-sm break-flex-xs xs-mb-1-5">
+						<nav class="lang-navbar mr-7 mt-1 md-mr-2">
+							<ul>
+								<li>
+									<a href="#"><i class="dw dw-globe-2"></i> <span>РУ</span></a>
+									<ul>
+										<li><a href="#"><span>EN</span></a></li>
+										<li><a href="#"><span>UZ</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+						<nav class="footer-navbar">
+							<ul>
+								<li><a href="#">Главная</a></li>
+								<li><a href="#">Расчёт стоимости</a></li>
+								<li><a href="#">О компании</a></li>
+							</ul>
+						</nav>
+						<nav class="footer-navbar">
+							<ul>
+								<li><a href="#">О Портале</a></li>
+								<li><a href="#">FAQ</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="right-side">
+						<div class="footer-contact">
+							<h3>Контакты</h3>
+							<nav class="icon-navbar">
+								<ul>
+									<li>
+										<a href="mailto:sample@example.com">
+											<span>sample@example.com</span>
+										</a>
+									</li>
+									<li>
+										<a target="_BLANK" href="https://www.google.com/maps/place/2+%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82+%D0%9D%D0%B0%D0%B2%D0%BE%D0%B8,+%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82,+%D0%A3%D0%B7%D0%B1%D0%B5%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD/@41.3195176,69.2642859,17z/data=!3m1!4b1!4m5!3m4!1s0x38ae8b3e649f4b2b:0x3f3857c4a8a6266c!8m2!3d41.3195176!4d69.2664746">
+											<span>г.Ташкент, ул. Алишера Навои <br/>Шайхонтохурский район 2\52</span>
+										</a>
+									</li>
+									<li>
+										<a href="tel:+998904556874">
+											<span>+998 90 455 68 74</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div class="md-overlay"></div>
+	<!-- Script's side -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="/js/modals/classie.js"></script>
+	<script src="/js/modals/modalEffects.js"></script>
+	<script src="/js/init.js"></script>
+</body>
+</html>
