@@ -4,6 +4,88 @@
 .visible-lg {
   display: none; }
 
+@media (min-width: 1201px) and (max-width: 1550px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.3; }
+  h3 {
+    font-size: 1.3rem;
+    line-height: 1.7; }
+  .text-parent-18-29 {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+    .text-parent-18-29 p, .text-parent-18-29 li {
+      font-size: 0.9rem;
+      line-height: 1.7; }
+  .input-with-icon .form-control {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .form-control {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .btn {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+    .btn.btn-sm {
+      font-size: 1rem;
+      line-height: 1.7; }
+  .flex-side.row.columns-2 > * {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 22vw;
+    -ms-flex: 1 1 22vw;
+    flex: 1 1 22vw; }
+  .tabs-navbar ul li a {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    font-weight: 500; }
+  .icon-navbar ul li a {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .border-box.lg p {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .company-information p {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .faq-item-box .faq-head button {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .faq-item-box.active .faq-body p {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .contact-widget .item {
+    line-height: 1.7rem;
+    font-size: 0.9rem; }
+  .my-messages ul li a {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+    .my-messages ul li a .name {
+      font-size: 0.9rem;
+      line-height: 1.7; }
+  .messages-container .body .message-inner-container .info-message-box p {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .messages-container .body .message-inner-container .one-message p {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .messages-container .body .messages-tab ul li a {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .border-table-box.lg .one-item .col p {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .car-content-side > .body .description p {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .image-box > .content-side p {
+    line-height: 1.7;
+    font-size: 1rem; }
+  .small-payment-box .alert p {
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .intro-slider-section .right-side {
+    max-width: 700px; } }
+
 @media (min-width: 940px) and (max-width: 1200px) {
   .lg-mt-0 {
     margin-top: 0rem !important; }

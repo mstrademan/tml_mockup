@@ -751,6 +751,129 @@ hr {
             .tabs-navbar ul li a.yellow.active .dw {
               color: #fff; }
 
+.radio-navbar ul {
+  list-style: none;
+  line-height: 1;
+  padding: 0px;
+  margin: 0px;
+  white-space: nowrap; }
+  .radio-navbar ul li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    position: relative; }
+    .radio-navbar ul li:first-child input:not(:checked) + label {
+      border-left: 1px solid #C1C1C1; }
+    .radio-navbar ul li:first-child input:checked + label {
+      margin-left: 0px; }
+    .radio-navbar ul li:first-child label {
+      -webkit-border-radius: 4px 0px 0px 4px;
+      border-radius: 4px 0px 0px 4px; }
+    .radio-navbar ul li:last-child input:not(:checked) + label {
+      border-right: 1px solid #C1C1C1; }
+    .radio-navbar ul li:last-child input:checked + label {
+      margin-right: 0px;
+      margin-left: -4px; }
+    .radio-navbar ul li:last-child label {
+      -webkit-border-radius: 0px 4px 4px 0px;
+      border-radius: 0px 4px 4px 0px; }
+      .radio-navbar ul li:last-child label::after {
+        display: none; }
+    .radio-navbar ul li input {
+      display: none; }
+      .radio-navbar ul li input:checked + label {
+        background-color: #0AB65A;
+        border-color: #0AB65A;
+        position: relative;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        margin-right: -4px;
+        margin-left: -4px;
+        color: #fff;
+        z-index: 2; }
+        .radio-navbar ul li input:checked + label::after {
+          display: none; }
+        .radio-navbar ul li input:checked + label.yellow {
+          background-color: #F18401;
+          border-color: #F18401;
+          color: #fff; }
+          .radio-navbar ul li input:checked + label.yellow .dw {
+            color: #fff; }
+    .radio-navbar ul li label {
+      border: 1px solid #C1C1C1;
+      border-right: none;
+      position: relative;
+      border-left: none;
+      padding: 8px 16px;
+      line-height: 29px;
+      font-weight: 600;
+      font-size: 18px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      color: #848484; }
+      .radio-navbar ul li label:hover {
+        cursor: pointer; }
+      .radio-navbar ul li label .dw {
+        margin-right: 0.2rem; }
+      .radio-navbar ul li label .badge {
+        background-color: #F18401;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        height: 27px;
+        right: -15px;
+        color: #fff;
+        width: 27px;
+        top: -15px;
+        z-index: 5; }
+      .radio-navbar ul li label.active {
+        background-color: #0AB65A;
+        border-color: #0AB65A;
+        position: relative;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        margin-right: -4px;
+        margin-left: -4px;
+        color: #fff;
+        z-index: 2; }
+        .radio-navbar ul li label.active::after {
+          display: none; }
+      .radio-navbar ul li label > * {
+        pointer-events: none; }
+      .radio-navbar ul li label::after {
+        background-color: #EDEDED;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        position: absolute;
+        content: "";
+        height: 50%;
+        width: 1px;
+        right: 0px;
+        top: 50%; }
+      .radio-navbar ul li label.yellow {
+        color: #F18401; }
+        .radio-navbar ul li label.yellow .dw {
+          color: #F18401; }
+        .radio-navbar ul li label.yellow.active {
+          color: #fff; }
+          .radio-navbar ul li label.yellow.active .dw {
+            color: #fff; }
+
 .main-navigation ul {
   list-style: none;
   line-height: 1;
@@ -1406,6 +1529,9 @@ hr {
   .vertical-list.list-3 > *:last-child {
     margin-bottom: 0px; }
 
+.horizontal-list > * {
+  margin-bottom: 0px; }
+
 .horizontal-list.null > * {
   margin-right: 0; }
 
@@ -1469,6 +1595,7 @@ hr {
       top: 0px; }
 
 .form-group {
+  position: relative;
   margin-bottom: 1rem;
   text-align: left; }
   .form-group:last-child {
@@ -2036,6 +2163,7 @@ hr {
 .main-footer {
   border-top: 1px solid #EDEDED;
   padding: 25px 0px;
+  margin-top: 5rem;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -2871,8 +2999,6 @@ hr {
         margin-right: 0.3rem; }
     .data-table-dw .th-line > strong {
       color: #222; }
-    .data-table-dw .th-line:hover {
-      cursor: pointer; }
     .data-table-dw .th-line .dw {
       font-size: 1.3rem; }
   .data-table-dw .td-line {
@@ -2902,7 +3028,6 @@ hr {
     .data-table-dw .td-line > span {
       border-bottom: 1px solid #EDEDED;
       padding-bottom: 8px;
-      white-space: nowrap;
       margin-bottom: 8px;
       padding-right: 0px;
       padding-left: 0px;
@@ -3565,3 +3690,44 @@ table.dataTable.no-footer {
     width: 100%;
     right: 0px;
     top: 50%; }
+
+.datepicker--day-name {
+  color: #0AB65A; }
+
+.datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-current- {
+  background-color: #0AB65A; }
+
+.datepicker--cell.-current- {
+  color: #0AB65A; }
+
+.delete-form-group {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #d33;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px;
+  border: none;
+  height: 30px;
+  right: -13px;
+  width: 30px;
+  color: #fff;
+  top: 10px; }
+  .delete-form-group:hover {
+    background-color: #EA6060;
+    cursor: pointer; }
+  .delete-form-group * {
+    pointer-events: none; }

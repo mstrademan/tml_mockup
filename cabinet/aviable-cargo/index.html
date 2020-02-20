@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
 	<script src="/js/javascript-rating.js"></script>
+	<link rel="stylesheet" href="/css/datepicker.min.css">
 	<link rel="stylesheet" href="/css/normalize.min.css">
 	<link rel="stylesheet" href="/css/fonts.css">
 	<link rel="stylesheet" href="/css/theme-style.css">
@@ -253,1500 +254,761 @@
 					</div>
 					<div class="body">
 						<div class="flex-side space mb-3 horizontal-list list-3 break-flex-lg break-flex-md break-flex-sm break-flex-xs">
-							<nav class="tabs-navbar mb-0 tabs-navbar-js lg-mb-1-5 md-mb-1-5 sm-mb-1-5 xs-mb-1-5">
+							<nav class="radio-navbar mb-0 tabs-navbar-js lg-mb-1-5 md-mb-1-5 sm-mb-1-5 xs-mb-1-5">
 								<ul>
-									<li><a class="active" href="#tab-1"><i class="dw dw-flag"></i> <span>Локальные</span></a></li>
-									<li><a href="#tab-2"><i class="dw dw-globe-2"></i> <span>Международные</span></a></li>
+									<li>
+										<input checked="checked" type="radio" name="radio-1" id="local-1">
+										<label for="local-1"><i class="dw dw-flag"></i> <span>Локальные</span></label>
+									</li>
+									<li>
+										<input type="radio" name="radio-1" id="local-2">
+										<label for="local-2"><i class="dw dw-globe-2"></i> <span>Международные</span></label>
+									</li>
 								</ul>
 							</nav>
 							<div class="right-side">
 								<p class="text-14-23">Локальные грузы - отображаются только локальные грузы Для полученя доступа для показа международных грузов - преобретите лицензию в ближайшем управлении и <a class="link tdu" href="#">загрузите</a> в профиль</p>
 							</div>
 						</div>
-						<div class="tabs-content-side">
-							<div class="one-tab active" id="tab-1">
-								<div class="filter-box">
-									<div class="head">
-										<h3>Фильтр</h3>
-									</div>
-									<div class="body">
-										<div class="flex-side horizontal-list list-2 top break-flex-lg lg-full break-flex-md break-flex-sm break-flex-xs md-full sm-full xs-full">
-											<div class="col">
-												<div class="form-group">
-													<label for="send-point">Точка отправки</label>
-													<div class="input-with-icon">
-														<i class="dw dw-pin"></i>
-														<input type="text" class="form-control" placeholder="Город, страна" id="send-point">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="destination-point">Точка прибытия</label>
-													<div class="input-with-icon">
-														<i class="dw dw-pin"></i>
-														<input type="text" class="form-control" placeholder="Город, страна" id="destination-point">
-													</div>
-												</div>
-											</div>
-											<div class="col">
-												<div class="flex-side top horizontal-list list-2 break-flex-xs">
-													<div class="form-group">
-														<label for="max-lenght">Макс длина</label>
-														<div class="input-with-icon">
-															<i class="dw dw-swap"></i>
-															<input type="text" class="form-control" placeholder="16" id="max-lenght" value="16">
-														</div>
-													</div>
-													<div class="form-group">
-														<label for="max-width">Макс ширина</label>
-														<div class="input-with-icon">
-															<i class="dw dw-flip-2"></i>
-															<input type="text" class="form-control" placeholder="24" id="max-width" value="24">
-														</div>
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="type-of-cargo">Тип груза</label>
-													<div class="theme-select">
-														<select name="type-of-cargo" id="type-of-cargo" class="form-control">
-															<option value="Тип груза">Тип Груза</option>
-															<option value="Тип груза">Тип Груза</option>
-															<option value="Тип груза">Тип Груза</option>
-															<option value="Тип груза">Тип Груза</option>
-														</select>
-													</div>
-												</div>
-											</div>
-											<div class="col">
-												<div class="flex-side top horizontal-list list-2 break-flex-xs">
-													<div class="form-group">
-														<label for="max-height">Макс высота</label>
-														<div class="input-with-icon">
-															<i class="dw dw-swap rotate"></i>
-															<input type="text" class="form-control" placeholder="16" id="max-height" value="16">
-														</div>
-													</div>
-													<div class="form-group">
-														<label for="max-weight">Макс Вес</label>
-														<div class="input-with-icon">
-															<i class="dw dw-upload rotate down"></i>
-															<input type="text" class="form-control" placeholder="24" id="max-weight" value="24">
-														</div>
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="type-of-cargo-2">Тип прицепа</label>
-													<div class="theme-select">
-														<select name="type-of-cargo-2" id="type-of-cargo-2" class="form-control">
-															<option value="Тип прицепа">Тип прицепа</option>
-															<option value="Тип прицепа">Тип прицепа</option>
-															<option value="Тип прицепа">Тип прицепа</option>
-															<option value="Тип прицепа">Тип прицепа</option>
-														</select>
-													</div>
-												</div>
-											</div>
-											<div class="col">
-												<div class="form-group">
-													<label for="loading-date-from">Дата погрузки от</label>
-													<div class="input-with-icon">
-														<i class="dw dw-clock"></i>
-														<input type="text" class="form-control" placeholder="15.02.19" value="15.02.19" id="loading-date-from">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="loading-date-to">Дата отгрузки до</label>
-													<div class="input-with-icon">
-														<i class="dw dw-clock"></i>
-														<input type="text" class="form-control" placeholder="15.02.19" value="15.02.19" id="loading-date-to">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="footer">
-										<div class="flex-side space full break-flex-lg lg-full break-flex-md break-flex-sm break-flex-xs md-full sm-full xs-full">
-											<div class="left-side col-360">
-												<button class="btn btn-default warning btn-xs"><i class="dw dw-star"></i> Сохраненные</button>
-											</div>
-											<div class="right-side fw">
-												<div class="flex-side horizontal-list list-2 right break-flex-md break-flex-sm break-flex-xs md-vertical-list-list-1 md-mt-1 sm-vertical-list-list-1 sm-mt-1 xs-mt-1 sm-vertical-list-list-1 xs-mt-1 xs-vertical-list-list-1">
-													<div class="inline flex">
-														<div class="theme-checkbox">
-															<input type="checkbox" name="dogruzka-mashiny" id="dogruzka-mashiny">
-															<label for="dogruzka-mashiny"></label>
-														</div>
-														<label for="dogruzka-mashiny">Догрузка машины</label>
-													</div>
-													<div class="inline flex">
-														<div class="theme-checkbox">
-															<input type="checkbox" name="save-search" id="save-search">
-															<label for="save-search"></label>
-														</div>
-														<label for="save-search">Сохранить поиск</label>
-													</div>
-													<button class="btn btn-success col-360">Поиск</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<table class="data-table-dw">
-									<thead>
-										<tr>
-											<th>
-												<span class="th-line">
-													<span>Отправка</span>
-													<span>Прибытие</span>
-												</span>
-											</th>
-											<th>
-												<span class="th-line">
-													<span>Откуда</span>
-													<span>Куда</span>
-												</span>
-											</th>
-											<th>
-												<span class="th-line">
-													<span>Расстояние</span>
-													<span>Тип продукта</span>
-												</span>
-											</th>
-											<th>
-												<span class="th-line">
-													<span>Вес</span>
-													<span>Стоимость за км</span>
-												</span>
-											</th>
-											<th>
-												<span class="th-line">
-													<span>Тип авто</span>
-													<span>Компания</span>
-												</span>
-											</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+						<div class="filter-box">
+							<div class="head">
+								<h3>Фильтр</h3>
 							</div>
-							<div class="one-tab" id="tab-2">
-								<div class="filter-box">
-									<div class="head">
-										<h3>Фильтр</h3>
-									</div>
-									<div class="body">
-										<div class="flex-side horizontal-list list-2 top break-flex-lg lg-full break-flex-md md-full break-flex-sm sm-full break-flex-xs xs-full">
-											<div class="col">
-												<div class="form-group">
-													<label for="send-point-2">Точка отправки</label>
-													<div class="input-with-icon">
-														<i class="dw dw-pin"></i>
-														<input type="text" class="form-control" placeholder="Город, страна" id="send-point-2">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="destination-point-2">Точка прибытия</label>
-													<div class="input-with-icon">
-														<i class="dw dw-pin"></i>
-														<input type="text" class="form-control" placeholder="Город, страна" id="destination-point-2">
-													</div>
-												</div>
+							<div class="body">
+								<div class="flex-side horizontal-list list-2 top break-flex-lg lg-full break-flex-md break-flex-sm break-flex-xs md-full sm-full xs-full">
+									<div class="col">
+										<div class="form-group">
+											<label for="send-point">Точка отправки</label>
+											<div class="input-with-icon">
+												<i class="dw dw-pin"></i>
+												<input type="text" class="form-control" placeholder="Город, страна" id="send-point">
 											</div>
-											<div class="col">
-												<div class="flex-side top horizontal-list list-2 break-flex-xs">
-													<div class="form-group">
-														<label for="max-lenght-2">Макс длина</label>
-														<div class="input-with-icon">
-															<i class="dw dw-swap"></i>
-															<input type="text" class="form-control" placeholder="16" id="max-lenght-2" value="16">
-														</div>
-													</div>
-													<div class="form-group">
-														<label for="max-width-2">Макс ширина</label>
-														<div class="input-with-icon">
-															<i class="dw dw-flip-2"></i>
-															<input type="text" class="form-control" placeholder="24" id="max-width-2" value="24">
-														</div>
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="type-of-cargo-2">Тип груза</label>
-													<div class="theme-select">
-														<select name="type-of-cargo" id="type-of-cargo-2" class="form-control">
-															<option value="Тип груза">Тип Груза</option>
-															<option value="Тип груза">Тип Груза</option>
-															<option value="Тип груза">Тип Груза</option>
-															<option value="Тип груза">Тип Груза</option>
-														</select>
-													</div>
-												</div>
-											</div>
-											<div class="col">
-												<div class="flex-side top horizontal-list list-2 break-flex-xs">
-													<div class="form-group">
-														<label for="max-height-2">Макс высота</label>
-														<div class="input-with-icon">
-															<i class="dw dw-swap rotate"></i>
-															<input type="text" class="form-control" placeholder="16" id="max-height-2" value="16">
-														</div>
-													</div>
-													<div class="form-group">
-														<label for="max-weight-2">Макс Вес</label>
-														<div class="input-with-icon">
-															<i class="dw dw-upload rotate down"></i>
-															<input type="text" class="form-control" placeholder="24" id="max-weight-2" value="24">
-														</div>
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="type-of-cargo-3">Тип прицепа</label>
-													<div class="theme-select">
-														<select name="type-of-cargo" id="type-of-cargo-3" class="form-control">
-															<option value="Тип прицепа">Тип прицепа</option>
-															<option value="Тип прицепа">Тип прицепа</option>
-															<option value="Тип прицепа">Тип прицепа</option>
-															<option value="Тип прицепа">Тип прицепа</option>
-														</select>
-													</div>
-												</div>
-											</div>
-											<div class="col">
-												<div class="form-group">
-													<label for="loading-date-from-2">Дата погрузки от</label>
-													<div class="input-with-icon">
-														<i class="dw dw-clock"></i>
-														<input type="text" class="form-control" placeholder="15.02.19" value="15.02.19" id="loading-date-from-2">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="loading-date-to-2">Дата отгрузки до</label>
-													<div class="input-with-icon">
-														<i class="dw dw-clock"></i>
-														<input type="text" class="form-control" placeholder="15.02.19" value="15.02.19" id="loading-date-to-2">
-													</div>
-												</div>
+										</div>
+										<div class="form-group">
+											<label for="destination-point">Точка прибытия</label>
+											<div class="input-with-icon">
+												<i class="dw dw-pin"></i>
+												<input type="text" class="form-control" placeholder="Город, страна" id="destination-point">
 											</div>
 										</div>
 									</div>
-									<div class="footer">
-										<div class="flex-side space full break-flex-lg lg-full break-flex-md md-full break-flex-sm sm-full break-flex-xs xs-full">
-											<div class="left-side col-360">
-												<button class="btn btn-default warning btn-xs"><i class="dw dw-star"></i> Сохраненные</button>
-											</div>
-											<div class="right-side fw">
-												<div class="flex-side horizontal-list list-2 right break-flex-xs xs-vertical-list-list-1 xs-mt-1">
-													<div class="inline flex">
-														<div class="theme-checkbox">
-															<input type="checkbox" name="dogruzka-mashiny-2" id="dogruzka-mashiny-2">
-															<label for="dogruzka-mashiny-2"></label>
-														</div>
-														<label for="dogruzka-mashiny-2">Догрузка машины</label>
-													</div>
-													<div class="inline flex">
-														<div class="theme-checkbox">
-															<input type="checkbox" name="save-search-2" id="save-search-2">
-															<label for="save-search-2"></label>
-														</div>
-														<label for="save-search-2">Сохранить поиск</label>
-													</div>
-													<button class="btn btn-success col-360">Поиск</button>
+									<div class="col">
+										<div class="flex-side top horizontal-list list-2 break-flex-xs">
+											<div class="form-group">
+												<label for="max-lenght">Макс длина</label>
+												<div class="input-with-icon">
+													<i class="dw dw-swap"></i>
+													<input type="text" class="form-control" placeholder="16" id="max-lenght" value="16">
 												</div>
+											</div>
+											<div class="form-group">
+												<label for="max-width">Макс ширина</label>
+												<div class="input-with-icon">
+													<i class="dw dw-flip-2"></i>
+													<input type="text" class="form-control" placeholder="24" id="max-width" value="24">
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="type-of-cargo">Тип груза</label>
+											<div class="theme-select">
+												<select name="type-of-cargo" id="type-of-cargo" class="form-control">
+													<option value="Тип груза">Тип Груза</option>
+													<option value="Тип груза">Тип Груза</option>
+													<option value="Тип груза">Тип Груза</option>
+													<option value="Тип груза">Тип Груза</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="flex-side top horizontal-list list-2 break-flex-xs">
+											<div class="form-group">
+												<label for="max-height">Макс высота</label>
+												<div class="input-with-icon">
+													<i class="dw dw-swap rotate"></i>
+													<input type="text" class="form-control" placeholder="16" id="max-height" value="16">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="max-weight">Макс Вес</label>
+												<div class="input-with-icon">
+													<i class="dw dw-upload rotate down"></i>
+													<input type="text" class="form-control" placeholder="24" id="max-weight" value="24">
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="type-of-cargo-2">Тип прицепа</label>
+											<div class="theme-select">
+												<select name="type-of-cargo-2" id="type-of-cargo-2" class="form-control">
+													<option value="Тип прицепа">Тип прицепа</option>
+													<option value="Тип прицепа">Тип прицепа</option>
+													<option value="Тип прицепа">Тип прицепа</option>
+													<option value="Тип прицепа">Тип прицепа</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label for="loading-date-from">Дата погрузки от</label>
+											<div class="input-with-icon">
+												<i class="dw dw-clock"></i>
+												<input type="text" class="form-control datepicker-input" placeholder="15.02.19" value="15.02.19" id="loading-date-from">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="loading-date-to">Дата отгрузки до</label>
+											<div class="input-with-icon">
+												<i class="dw dw-clock"></i>
+												<input type="text" class="form-control datepicker-input" placeholder="15.02.19" value="15.02.19" id="loading-date-to">
 											</div>
 										</div>
 									</div>
 								</div>
-								<table class="data-table-dw">
-									<thead>
-										<tr>
-											<th>
-												<span class="th-line">
-													<span>Отправка</span>
-													<span>Прибытие</span>
-												</span>
-											</th>
-											<th>
-												<span class="th-line">
-													<span>Откуда</span>
-													<span>Куда</span>
-												</span>
-											</th>
-											<th>
-												<span class="th-line">
-													<span>Расстояние</span>
-													<span>Тип продукта</span>
-												</span>
-											</th>
-											<th>
-												<span class="th-line">
-													<span>Вес</span>
-													<span>Стоимость за км</span>
-												</span>
-											</th>
-											<th>
-												<span class="th-line">
-													<span>Тип авто</span>
-													<span>Компания</span>
-												</span>
-											</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
-													<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
-													<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
-													<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
-													<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
-												</span>
-											</td>
-											<td>
-												<span class="td-line">
-													<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
-													<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
-												</span>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+							</div>
+							<div class="footer">
+								<div class="flex-side space full break-flex-lg lg-full break-flex-md break-flex-sm break-flex-xs md-full sm-full xs-full">
+									<div class="left-side col-360">
+										<button class="btn btn-default warning btn-xs"><i class="dw dw-star"></i> Сохраненные</button>
+									</div>
+									<div class="right-side fw">
+										<div class="flex-side horizontal-list list-2 right break-flex-md break-flex-sm break-flex-xs md-vertical-list-list-1 md-mt-1 sm-vertical-list-list-1 sm-mt-1 xs-mt-1 sm-vertical-list-list-1 xs-mt-1 xs-vertical-list-list-1">
+											<div class="inline flex">
+												<div class="theme-checkbox">
+													<input type="checkbox" name="dogruzka-mashiny" id="dogruzka-mashiny">
+													<label for="dogruzka-mashiny"></label>
+												</div>
+												<label for="dogruzka-mashiny">Догрузка машины</label>
+											</div>
+											<div class="inline flex">
+												<div class="theme-checkbox">
+													<input type="checkbox" name="save-search" id="save-search">
+													<label for="save-search"></label>
+												</div>
+												<label for="save-search">Сохранить поиск</label>
+											</div>
+											<button class="btn btn-success col-360">Поиск</button>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
+						<table class="data-table-dw">
+							<thead>
+								<tr>
+									<th>
+										<span class="th-line">
+											<span>Отправка</span>
+											<span>Прибытие</span>
+										</span>
+									</th>
+									<th>
+										<span class="th-line">
+											<span>Откуда</span>
+											<span>Куда</span>
+										</span>
+									</th>
+									<th>
+										<span class="th-line">
+											<span>Расстояние</span>
+											<span>Тип продукта</span>
+										</span>
+									</th>
+									<th>
+										<span class="th-line">
+											<span>Вес</span>
+											<span>Стоимость за км</span>
+										</span>
+									</th>
+									<th>
+										<span class="th-line">
+											<span>Тип авто</span>
+											<span>Компания</span>
+										</span>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>2350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$3 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+											<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>1350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$2 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
@@ -1820,6 +1082,7 @@
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="/js/modals/classie.js"></script>
 	<script src="/js/modals/modalEffects.js"></script>
+	<script src="/js/datepicker.min.js"></script>
 	<script src="/js/init.js"></script>
 </body>
 </html>

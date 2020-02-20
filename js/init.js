@@ -1,21 +1,4 @@
 jQuery(document).ready(function($) {
-	$('.data-table-dw').dataTable({
-		responsive: true,
-        "initComplete": function () {
-        	let paginateContainer = document.querySelectorAll('.dataTables_paginate');
-        		if (paginateContainer) {
-        			for (var i = paginateContainer.length - 1; i >= 0; i--) {
-        				let prevButton = paginateContainer[i].querySelector('.previous');
-        					prevButton.innerHTML = "<i class='dw dw-arrow-ios-left'></i> <span>Пред</span>";
-        				let nextButton = paginateContainer[i].querySelector('.next');
-        					nextButton.innerHTML = "<span>След</span> <i class='dw dw-arrow-ios-right'></i>";
-        			}
-        		}
-        }
-    });
-	$('#my-search-table-input').keyup(function(){
-	      $('.data-table-dw').dataTable().fnFilter($(this).val());
-	});
     $(".message-inner-container").mCustomScrollbar({
     	theme: "dark"
     });
@@ -39,6 +22,7 @@ jQuery(document).ready(function($) {
 				$('#intro-all-slides').text(allSlides.length);
 			});
 		}
+	$('.datepicker-input').datepicker();
 })
 let allInput = document.querySelectorAll('input.form-control');
 	for (var i = allInput.length - 1; i >= 0; i--) {
@@ -161,31 +145,6 @@ let fileInput = document.querySelectorAll('input[type="file"]');
 			e.target.parentElement.children[2].children[0].value = getVal;
 		})
 	}
-window.onload = function () {
-	var form = document.getElementById('validate-form');
-	if (form) {
-		let submitButton = form.querySelector('button[type="submit"]');
-		submitButton.onclick = function() {
-			for(var i=0; i < form.elements.length; i++){
-				if(form.elements[i].value === '' && form.elements[i].hasAttribute('required')){
-					let inputWithIcon = form.elements[i].parentElement,
-						formGroup = form.elements[i].parentElement.parentElement,
-						formGroupLabel = form.elements[i].parentElement.parentElement.children[0],
-						formGroupLabelHtml = formGroupLabel.innerHTML,
-						beforeHTML = form.elements[i].parentElement.innerHTML;
-
-					if (!formGroupLabel.querySelector('span')) {
-						formGroup.classList.add('error');
-						formGroupLabel.innerHTML += '<span class="error">Введите данные</span>';
-					}
-
-					// return false;
-				}
-			}
-			form.submit();
-		} 
-	}
-};
 let choosePaymentContainer = document.querySelector('.choose-payment');
 	if (choosePaymentContainer) {
 		let ChoosePaymentButtons = choosePaymentContainer.querySelectorAll('button');
@@ -230,6 +189,13 @@ let addNewInput = document.querySelectorAll('.add-new-input');
 				let prevFormGroupHTML = prevFormGroup.outerHTML;
 				
 				prevFormGroup.parentElement.insertAdjacentHTML('afterbegin', prevFormGroupHTML);
+				prevFormGroup.innerHTML += "<button class='delete-form-group' type='button'>&times;</button>";
+				let deleteButton = document.querySelectorAll('.delete-form-group');
+				for (var i = deleteButton.length - 1; i >= 0; i--) {
+					deleteButton[i].addEventListener('click', function(e) {
+						e.target.parentElement.remove();
+					});
+				}
 			});
 		}
 	}
@@ -265,3 +231,28 @@ let faqItemBox = document.querySelectorAll('.faq-item-box');
 				})
 		}
 	}
+window.onload = function () {
+	var form = document.getElementById('validate-form');
+	if (form) {
+		let submitButton = form.querySelector('button[type="submit"]');
+		submitButton.onclick = function() {
+			for(var i=0; i < form.elements.length; i++){
+				if(form.elements[i].value === '' && form.elements[i].hasAttribute('required')){
+					let inputWithIcon = form.elements[i].parentElement,
+						formGroup = form.elements[i].parentElement.parentElement,
+						formGroupLabel = form.elements[i].parentElement.parentElement.children[0],
+						formGroupLabelHtml = formGroupLabel.innerHTML,
+						beforeHTML = form.elements[i].parentElement.innerHTML;
+
+					if (!formGroupLabel.querySelector('span')) {
+						formGroup.classList.add('error');
+						formGroupLabel.innerHTML += '<span class="error">Введите данные</span>';
+					}
+
+					// return false;
+				}
+			}
+			form.submit();
+		} 
+	}
+};
