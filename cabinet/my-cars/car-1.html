@@ -72,6 +72,48 @@
 			</div>
 		</div>
 	</div>
+	<div class="md-modal md-effect-1 user-question-modal" id="are-you-seriuosly">
+		<div class="md-content">
+			<p>Вы уверены что хотите <strong class="red-t">удалить</strong> сохраненный поиск?</p>
+			<div class="flex-side space">
+				<button class="link gray md-close fw600">Отмена</button>
+				<button class="btn btn-danger btn-xs yes-i-want-delete">Удалить</button>
+			</div>
+		</div>
+	</div>
+	<div class="md-modal md-effect-1 make-offer-modal" id="make-offer">
+		<div class="md-content">
+			<h3>Сделайте предложение по грузу</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+			<form action="#" method="POST">
+				<div class="flex-side top horizontal-list list-2 break-flex-xs">
+					<div class="form-group">
+						<label for="modal-phone-1">Номер телефона</label>
+						<div class="input-with-icon">
+							<i class="dw dw-phone-call"></i>
+							<input type="text" class="form-control" id="modal-phone-1" placeholder="Введите номер телефона">
+						</div>
+					</div>
+					<div class="form-group xs-140">
+						<label for="modal-price-km">Цена за км.</label>
+						<div class="input-with-text left">
+							<span class="success">$</span>
+							<input type="text" class="form-control" id="modal-price-km" placeholder="5" value="5">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-with-icon">
+						<textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Сообщение"></textarea>
+						<i class="dw dw-message-circle"></i>
+					</div>
+				</div>
+				<div class="text-right">
+					<button class="btn btn-success" type="submit">Отправить предложение</button>
+				</div>
+			</form>
+		</div>
+	</div>
 	<aside class="mobile-sidebar" id="get-sidebar">
 		<nav class="mobile-navigation">
 			<ul>
@@ -306,17 +348,16 @@
 			<div class="container">
 				<div class="flex-side space break-flex-sm break-flex-xs">
 					<div class="left-side flex-side top break-flex-sm break-flex-xs xs-mb-1-5">
-						<nav class="lang-navbar mr-7 mt-1 md-mr-2">
-							<ul>
-								<li>
-									<a href="#"><i class="dw dw-globe-2"></i> <span>РУ</span></a>
-									<ul>
-										<li><a href="#"><span>EN</span></a></li>
-										<li><a href="#"><span>UZ</span></a></li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
+						<div class="input-with-icon mr-7 mt-1 md-mr-2">
+							<i class="dw dw-globe-2"></i>
+							<div class="theme-select">
+								<select name="lang" id="lang" class="form-control no-border">
+									<option value="RU">RU</option>
+									<option value="UZ">UZ</option>
+									<option value="EN">EN</option>
+								</select>
+							</div>
+						</div>
 						<nav class="footer-navbar">
 							<ul>
 								<li><a href="#">Главная</a></li>

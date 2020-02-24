@@ -231,6 +231,28 @@ let faqItemBox = document.querySelectorAll('.faq-item-box');
 				})
 		}
 	}
+let deleteTdLine = document.querySelectorAll('.delete-td-line');
+	if (deleteTdLine) {
+		for (var i = deleteTdLine.length - 1; i >= 0; i--) {
+			deleteTdLine[i].addEventListener('click', function(e) {
+				let parentTR = e.target.parentElement.parentElement.parentElement;
+				let AreYouSeriously = document.querySelector('#are-you-seriuosly');
+				let closeModal = AreYouSeriously.querySelector('.md-close');
+				let WantDelete = AreYouSeriously.querySelector('.yes-i-want-delete');
+					AreYouSeriously.classList.add('md-show');
+					closeModal.addEventListener('click', function(e) {
+						let getCurrentModal = e.target.parentElement.parentElement.parentElement;
+							getCurrentModal.classList.remove('md-show');
+					});
+					WantDelete.addEventListener('click', function(e) {
+						let getCurrentModal = e.target.parentElement.parentElement.parentElement;
+							getCurrentModal.classList.remove('md-show');
+							parentTR.remove();
+					});
+					// parentTR.remove();
+			})
+		}
+	}
 window.onload = function () {
 	var form = document.getElementById('validate-form');
 	if (form) {

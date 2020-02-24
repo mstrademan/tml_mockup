@@ -1345,6 +1345,13 @@ hr {
     .btn.btn-success:hover {
       background-color: #DEFCEC;
       color: #0AB65A; }
+  .btn.btn-danger {
+    background-color: #EA6060;
+    color: #fff; }
+    .btn.btn-danger:hover {
+      background-color: #fff;
+      border-color: #EA6060;
+      color: #EA6060; }
   .btn.btn-gray {
     background-color: #848484;
     color: #fff; }
@@ -1572,6 +1579,10 @@ hr {
   .input-group > * {
     display: block;
     height: 100%; }
+  .input-group.list > * {
+    margin-right: 0.8rem; }
+    .input-group.list > *:last-child {
+      margin-right: 0px; }
   .input-group .form-control {
     -webkit-border-radius: 4px;
     border-radius: 4px; }
@@ -1633,6 +1644,9 @@ hr {
   font-size: 15px;
   color: #222;
   width: 100%; }
+  .form-control.no-border {
+    padding-left: 0px;
+    border: none; }
   .form-control.bw-1 {
     border-width: 1px; }
   .form-control.error {
@@ -1669,6 +1683,11 @@ hr {
   .input-with-icon .form-control {
     padding-left: 46px;
     font-size: 18px; }
+  .input-with-icon textarea.form-control + .dw {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    top: 14px; }
   .input-with-icon.text span {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -2943,6 +2962,19 @@ hr {
   border: 2px solid #EDEDED;
   border-collapse: collapse;
   width: 100%; }
+  .data-table-dw .table-button {
+    background-color: transparent;
+    font-size: 1.3rem;
+    line-height: 1;
+    padding: 0px;
+    border: none;
+    color: #EA6060; }
+    .data-table-dw .table-button:hover {
+      cursor: pointer; }
+    .data-table-dw .table-button + * {
+      margin-left: 0.7rem; }
+    .data-table-dw .table-button * {
+      pointer-events: none; }
   .data-table-dw thead {
     background-color: #F8F8F8; }
   .data-table-dw td {
@@ -3731,3 +3763,29 @@ table.dataTable.no-footer {
     cursor: pointer; }
   .delete-form-group * {
     pointer-events: none; }
+
+.user-question-modal .md-content {
+  max-width: 360px;
+  padding: 1.5rem; }
+  .user-question-modal .md-content p {
+    line-height: 29px;
+    font-weight: 600;
+    font-size: 18px; }
+    .user-question-modal .md-content p strong {
+      font-weight: 600; }
+
+.make-offer-modal .md-content {
+  padding: 1.5rem; }
+  .make-offer-modal .md-content h3 {
+    font-size: 1.4rem;
+    line-height: 1.6; }
+  .make-offer-modal .md-content p {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #848484; }
+  .make-offer-modal .md-content label {
+    color: #848484; }
+  .make-offer-modal .md-content textarea {
+    max-height: 90px;
+    resize: none; }

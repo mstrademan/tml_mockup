@@ -237,7 +237,7 @@
 										</nav>
 									</div>
 								</aside>
-				<div class="car-content-side">
+				<div class="cabinet-content-side fw">
 					<aside class="mobile-cabinet-sidebar visible-md visible-xs visible-sm">
 						<div class="head">
 							<h2>Мой кабинет</h2>
@@ -291,129 +291,306 @@
 							</nav>
 						</div>
 					</aside>
-					<div class="body mb-2">
-						<h2>Автомобиль Man H-3000</h2>
-						<div class="flex-side top full break-flex-lg break-flex-md break-flex-sm break-flex-xs">
-							<div class="left-side">
-								<div class="content-side lg-mb-2 md-mb-2 sm-mb-2 xs-mb-2">
-									<div class="map-side mb-1-5">
-										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1059.3271647415547!2d69.29031328868399!3d41.325618562752894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef4ca56d11385%3A0xc12e4d46e57f33fb!2zMjQgQm9kb216b3IgWW8nbGkga28nY2hhc2ksINCi0L7RiNC60LXQvdGCLCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2s!4v1578958923884!5m2!1sru!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-									</div>
-									<div class="company-information">
-										<p>Название компании: <strong>OzMevaSanoat Company</strong></p>
-										<p>Номер телефона: <strong>+99890 327 6668</strong></p>
-										<p>Адрес: <strong>улица Бодомзор 24, Ташкент, Узбекистан</strong></p>
-										<p>Email компании: <a href="mailto:info@ozmevasanoat.com">info@ozmevasanoat.com</a></p>
-									</div>
-								</div>
+					<div class="heading-side mb-1-5">
+						<h2>Доступные грузы</h2>
+					</div>
+					<div class="body">
+						<div class="flex-side space mb-3 horizontal-list list-3 break-flex-lg break-flex-md break-flex-sm break-flex-xs">
+							<nav class="radio-navbar mb-0 tabs-navbar-js lg-mb-1-5 md-mb-1-5 sm-mb-1-5 xs-mb-1-5">
+								<ul>
+									<li>
+										<input checked="checked" type="radio" name="radio-1" id="local-1">
+										<label for="local-1"><i class="dw dw-flag"></i> <span>Локальные</span></label>
+									</li>
+									<li>
+										<input type="radio" name="radio-1" id="local-2">
+										<label for="local-2"><i class="dw dw-globe-2"></i> <span>Международные</span></label>
+									</li>
+								</ul>
+							</nav>
+							<div class="right-side">
+								<p class="text-14-23">Локальные грузы - отображаются только локальные грузы Для полученя доступа для показа международных грузов - преобретите лицензию в ближайшем управлении и <a class="link tdu" href="#">загрузите</a> в профиль</p>
 							</div>
-							<div class="right-side md-no-border sm-no-border xs-no-border md-padding-null sm-padding-null xs-padding-null">
-								<div class="characters">
-									<h3>Подробная информация</h3>
-									<div class="flex-side horizontal-list list-3 top full break-flex-sm break-flex-xs">
-										<div class="col">
-											<ul>
-												<li>Отправка/Прибытие: <strong>22.10.19 / 22.11.19</strong></li>
-												<li>Допустимый вес груза: <strong>2350 кг</strong></li>
-												<li>Тип машины: <strong>1х Рефрижератор</strong></li>
-												<li>Оплата за км: <strong>$3.6</strong></li>
-												<li>Модель авто: <strong>Lexus LFA</strong></li>
-												<li>Тех паспорт: <strong>#846549</strong></li>
-												<li>Номер машины: <strong>10 F 548 FC</strong></li>
-											</ul>
+						</div>
+						<div class="filter-box">
+							<div class="head">
+								<h3>Фильтр</h3>
+							</div>
+							<div class="body">
+								<div class="flex-side horizontal-list list-2 top break-flex-lg lg-full break-flex-md break-flex-sm break-flex-xs md-full sm-full xs-full">
+									<div class="col">
+										<div class="form-group">
+											<label for="send-point">Точка отправки</label>
+											<div class="input-with-icon">
+												<i class="dw dw-pin"></i>
+												<input type="text" class="form-control" placeholder="Город, страна" id="send-point">
+											</div>
 										</div>
-										<div class="col">
-											<ul>
-												<li>Высота: <strong>239</strong> см</li>
-												<li>Ширина: <strong>200</strong> см</li>
-												<li>Объем: <strong>200</strong> см³</li>
-												<li>Длина: <strong>239</strong> см</li>
-												<li>Вес: <strong>160</strong> кг</li>
-											</ul>
+										<div class="form-group">
+											<label for="destination-point">Точка прибытия</label>
+											<div class="input-with-icon">
+												<i class="dw dw-pin"></i>
+												<input type="text" class="form-control" placeholder="Город, страна" id="destination-point">
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="flex-side top horizontal-list list-2 break-flex-xs">
+											<div class="form-group">
+												<label for="max-lenght">Макс длина</label>
+												<div class="input-with-icon">
+													<i class="dw dw-swap"></i>
+													<input type="text" class="form-control" placeholder="16" id="max-lenght" value="16">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="max-width">Макс ширина</label>
+												<div class="input-with-icon">
+													<i class="dw dw-flip-2"></i>
+													<input type="text" class="form-control" placeholder="24" id="max-width" value="24">
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="type-of-cargo">Тип груза</label>
+											<div class="theme-select">
+												<select name="type-of-cargo" id="type-of-cargo" class="form-control">
+													<option value="Тип груза">Тип Груза</option>
+													<option value="Тип груза">Тип Груза</option>
+													<option value="Тип груза">Тип Груза</option>
+													<option value="Тип груза">Тип Груза</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="flex-side top horizontal-list list-2 break-flex-xs">
+											<div class="form-group">
+												<label for="max-height">Макс высота</label>
+												<div class="input-with-icon">
+													<i class="dw dw-swap rotate"></i>
+													<input type="text" class="form-control" placeholder="16" id="max-height" value="16">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="max-weight">Макс Вес</label>
+												<div class="input-with-icon">
+													<i class="dw dw-upload rotate down"></i>
+													<input type="text" class="form-control" placeholder="24" id="max-weight" value="24">
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="type-of-cargo-2">Тип прицепа</label>
+											<div class="theme-select">
+												<select name="type-of-cargo-2" id="type-of-cargo-2" class="form-control">
+													<option value="Тип прицепа">Тип прицепа</option>
+													<option value="Тип прицепа">Тип прицепа</option>
+													<option value="Тип прицепа">Тип прицепа</option>
+													<option value="Тип прицепа">Тип прицепа</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label for="loading-date-from">Дата погрузки от</label>
+											<div class="input-with-icon">
+												<i class="dw dw-clock"></i>
+												<input type="text" class="form-control datepicker-input" placeholder="15.02.19" value="15.02.19" id="loading-date-from">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="loading-date-to">Дата отгрузки до</label>
+											<div class="input-with-icon">
+												<i class="dw dw-clock"></i>
+												<input type="text" class="form-control datepicker-input" placeholder="15.02.19" value="15.02.19" id="loading-date-to">
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="description no-border">
-									<h3>Описание</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-								</div>
 							</div>
-						</div>
-					</div>
-					<hr>
-					<h3 class="mb-1-5">Сообщения для владельца данного авто</h3>
-					<div class="messages-container mw md">
-						<div class="body">
-							<div class="message-inner-container">
-								<div class="one-message">
-									<p>Во многих из этих приложений сочетания клавиш также <br>отображаются в подсказке при удерживании указателя мыши <br>над кнопкой.</p>
-								</div>
-								<div class="flex-side horizontal-list list-2 break-flex-sm break-flex-xs">
-									<div class="info-message-box fw">
-										<i class="dw dw-pin"></i>
-										<p><span>из:</span> Ташкент, Узбекистан</p>
+							<div class="footer">
+								<div class="flex-side space full break-flex-lg lg-full break-flex-md break-flex-sm break-flex-xs md-full sm-full xs-full">
+									<div class="left-side col-360">
+										<button class="btn btn-default warning btn-xs"><i class="dw dw-star"></i> Сохраненные</button>
 									</div>
-									<div class="info-message-box fw">
-										<i class="dw dw-phone-call"></i>
-										<p>+998 90 438 55 95</p>
-									</div>
-								</div>
-								<div class="flex-side horizontal-list list-2 mb-5 break-flex-sm break-flex-xs">
-									<div class="info-message-box fw">
-										<i class="dw dw-pin"></i>
-										<p>в: Баку, Азербайджан</p>
-									</div>
-									<div class="info-message-box">
-										<div class="dw">$</div>
-										<p>5 <span>за км</span></p>
+									<div class="right-side fw">
+										<div class="flex-side horizontal-list list-2 right break-flex-md break-flex-sm break-flex-xs md-vertical-list-list-1 md-mt-1 sm-vertical-list-list-1 sm-mt-1 xs-mt-1 sm-vertical-list-list-1 xs-mt-1 xs-vertical-list-list-1">
+											<div class="inline flex">
+												<div class="theme-checkbox">
+													<input type="checkbox" name="dogruzka-mashiny" id="dogruzka-mashiny">
+													<label for="dogruzka-mashiny"></label>
+												</div>
+												<label for="dogruzka-mashiny">Догрузка машины</label>
+											</div>
+											<div class="inline flex">
+												<div class="theme-checkbox">
+													<input type="checkbox" name="save-search" id="save-search">
+													<label for="save-search"></label>
+												</div>
+												<label for="save-search">Сохранить поиск</label>
+											</div>
+											<button class="btn btn-success col-360">Поиск</button>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="flex-side horizontal-list list-2 top full mw md gray-content break-flex-xs">
-						<div class="col">
-							<div class="form-group">
-								<label for="point-from">Точка отправки</label>
+						<table class="data-table-dw mb-1-5">
+							<thead>
+								<tr>
+									<th>
+										<span class="th-line">
+											<span>Отправка</span>
+											<span>Прибытие</span>
+										</span>
+									</th>
+									<th>
+										<span class="th-line">
+											<span>Откуда</span>
+											<span>Куда</span>
+										</span>
+									</th>
+									<th>
+										<span class="th-line">
+											<span>Расстояние</span>
+											<span>Тип продукта</span>
+										</span>
+									</th>
+									<th>
+										<span class="th-line">
+											<span>Вес</span>
+											<span>Стоимость за км</span>
+										</span>
+									</th>
+									<th>
+										<span class="th-line">
+											<span>Тип авто</span>
+											<span>Компания</span>
+										</span>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<span class="flex-side">
+											<button class="delete-td-line table-button"><i class="dw dw-trash-2"></i></button>
+											<span class="td-line">
+												<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+												<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+											</span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="flex-side">
+											<button class="delete-td-line table-button"><i class="dw dw-trash-2"></i></button>
+											<span class="td-line">
+												<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+												<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+											</span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="flex-side">
+											<button class="delete-td-line table-button"><i class="dw dw-trash-2"></i></button>
+											<span class="td-line">
+												<span><span class="green-t">от</span> <strong>14.02.19</strong></span>
+												<span><span class="red-t">до</span> <strong>19.03.19</strong></span>
+											</span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><span class="green-t">из:</span> <strong>Ташкент, Узбекистан</strong></span>
+											<span><span class="red-t">в:</span> <strong>Рига, Латвия</strong></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-navigation-2"></i> <span>4290 км</span></span>
+											<span><i class="dw dw-shopping-cart"></i> <span>Овощи/фрукты</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-archive"></i> <span>3350 кг</span></span>
+											<span><i class="dw dw-credit-card"></i> <span>$4 000/ $3.05 км</span></span>
+										</span>
+									</td>
+									<td>
+										<span class="td-line">
+											<span><i class="dw dw-car"></i> <span>1х Рефрижератор</span></span>
+											<span><i class="dw dw-briefcase"></i> <span>OzMevaSanoat Company</span></span>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="form-group">
+							<div class="input-group list">
 								<div class="input-with-icon">
-									<i class="dw dw-pin"></i>
-									<input type="text" class="form-control" id="point-from" placeholder="Введите точку отправки">
+									<i class="dw dw-credit-card"></i>
+									<input type="text" class="form-control" placeholder="$3 за км">
 								</div>
-							</div>
-							<div class="form-group">
-								<label for="point-to">Точка доставки</label>
-								<div class="input-with-icon">
-									<i class="dw dw-pin"></i>
-									<input type="text" class="form-control" id="point-to" placeholder="Введите точку доставки">
+								<div class="input-group-btn">
+									<button class="btn btn-success md-trigger" data-modal="make-offer">Предложить</button>
 								</div>
 							</div>
 						</div>
-						<div class="col mb-2">
-							<div class="form-group">
-								<label for="phone">Номер телефона</label>
-								<div class="input-with-icon">
-									<i class="dw dw-pin"></i>
-									<input type="text" class="form-control" id="phone" placeholder="Введите номер телефона">
-								</div>
-							</div>
-							<div class="form-group xs-140">
-								<label for="point-to">Цена за км.</label>
-								<div class="input-with-text">
-									<span class="success">$</span>
-									<input type="text" class="form-control" id="point-to" value="5">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mb-3 mw md">
-						<div class="form-group md mw">
-							<div class="input-with-icon text">
-								<i class="dw dw-message-circle"></i>
-								<span class="success">Отправить</span>
-								<input type="text" class="form-control" placeholder="Сообщение">
-							</div>
-						</div>
-						<p class="gray-t">Отправляя сообщение вы соглашаетесь с <a class="green-t" href="#">конституцией</a> Республики Узбекистан, а так же со всем остальным, что только можно.</p>
 					</div>
 				</div>
 			</div>
