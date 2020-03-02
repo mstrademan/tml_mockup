@@ -114,6 +114,55 @@
 			</form>
 		</div>
 	</div>
+	<div class="md-modal md-effect-1 submit-data-modal" id="submit-data">
+		<div class="md-content">
+			<div class="flex-side top horizontal-list list-2 break-flex-xs break-flex-sm break-flex-md">
+				<div class="left-side">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1059.3271647415547!2d69.29031328868399!3d41.325618562752894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef4ca56d11385%3A0xc12e4d46e57f33fb!2zMjQgQm9kb216b3IgWW8nbGkga28nY2hhc2ksINCi0L7RiNC60LXQvdGCLCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2s!4v1578958923884!5m2!1sru!2s" width="490" height="405" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+					<div class="flex-side space mt-2">
+						<strong id="search-user-geo" class="gray-t">Поиск местоположения...</strong>
+						<button type="button" class="btn btn-success btn-padding">Выбрать самому</button>
+					</div>
+				</div>
+				<div class="right-side">
+					<div class="form-group">
+						<label for="md-choose-status">Выберите статус</label>
+						<div class="theme-select">
+							<select name="md-choose-status" id="md-choose-status" class="form-control">
+								<option value="Выбранный статус">Выбранный статус</option>
+								<option value="Выбранный статус">Выбранный статус</option>
+								<option value="Выбранный статус">Выбранный статус</option>
+							</select>
+						</div>
+						<small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
+					</div>
+					<div class="form-group">
+						<div class="theme-input-file">
+							<label for="md-choose-file-to-upload">Выберите файл для загрузки</label>
+							<input type="file" class="form-control" id="md-choose-file-to-upload">
+							<div class="input-group right-btn">
+								<input type="text" class="form-control">
+								<div class="input-group-btn">
+									<button type="button" class="btn btn-black">Выбрать...</button>
+								</div>
+							</div>
+							<small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="md-order-desc" class="black-t">Комментарий к заказу</label>
+						<div class="input-with-icon">
+							<textarea name="md-order-desc" id="md-order-desc" cols="30" rows="2" class="form-control"></textarea>
+							<i class="dw dw-message-circle"></i>
+						</div>
+					</div>
+					<div class="form-group">
+						<button class="btn btn-success" type="submit">Отправить данные</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<aside class="mobile-sidebar" id="get-sidebar">
 		<nav class="mobile-navigation">
 			<ul>

@@ -40,6 +40,19 @@ perspective effects (not including the modals and the overlay).
     top: 1rem; }
     .md-modal .close-modal-button:hover {
       color: #0AB65A; }
+  .md-modal.submit-data-modal {
+    max-width: 1010px;
+    width: 100%; }
+    .md-modal.submit-data-modal .md-content {
+      padding: 40px 32px;
+      -webkit-border-radius: 0;
+      border-radius: 0; }
+      .md-modal.submit-data-modal .md-content .form-group {
+        margin-bottom: 1.25rem; }
+        .md-modal.submit-data-modal .md-content .form-group:last-child {
+          margin-bottom: 0; }
+        .md-modal.submit-data-modal .md-content .form-group label {
+          color: #848484; }
 
 .md-show {
   visibility: visible; }
@@ -1628,6 +1641,13 @@ hr {
       cursor: pointer; }
     .form-group label.black {
       color: #222; }
+  .form-group small {
+    margin: 0.5rem 0 0;
+    line-height: 23px;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    color: #848484; }
   .form-group.xs-140 {
     max-width: 140px; }
 
