@@ -1664,6 +1664,11 @@ hr {
   font-size: 15px;
   color: #222;
   width: 100%; }
+  .form-control.textarea {
+    height: auto; }
+    .form-control.textarea[rows="1"] {
+      max-height: 49px;
+      resize: none; }
   .form-control.no-border {
     padding-left: 0px;
     border: none; }
@@ -1724,6 +1729,25 @@ hr {
     .input-with-icon.text span.success {
       color: #0AB65A; }
   .input-with-icon.text .form-control {
+    padding-right: 5.5rem; }
+  .input-with-icon.button button {
+    background-color: transparent;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    line-height: 29px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #848484;
+    border: none;
+    right: 20px;
+    top: 50%; }
+    .input-with-icon.button button.success {
+      color: #0AB65A; }
+  .input-with-icon.button .form-control {
     padding-right: 5.5rem; }
 
 .input-with-text {
@@ -2797,6 +2821,21 @@ hr {
         padding: 16px; }
         .messages-container .body .message-inner-container .one-message:last-child {
           margin-bottom: 0px; }
+        .messages-container .body .message-inner-container .one-message.right {
+          margin-right: 20px;
+          float: right; }
+          .messages-container .body .message-inner-container .one-message.right::before {
+            border: 15px solid #DEFCEC;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            position: absolute;
+            display: block;
+            left: inherit;
+            right: -20px;
+            height: 0px;
+            content: "";
+            bottom: 0px;
+            width: 0px; }
         .messages-container .body .message-inner-container .one-message p {
           line-height: 29px;
           font-weight: 500;
