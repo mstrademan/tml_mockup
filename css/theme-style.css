@@ -1208,6 +1208,11 @@ hr {
 .btn-group.vertical .btn {
   display: block; }
 
+.btn-group.lg .btn {
+  margin-right: 1rem; }
+  .btn-group.lg .btn:last-child {
+    margin-right: 0; }
+
 .link {
   background-color: transparent;
   line-height: 23px;
