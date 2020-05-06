@@ -278,3 +278,59 @@ window.onload = function () {
 		} 
 	}
 };
+$.notify({
+	// options
+	icon: 'dw dw-bell',
+	title: 'Bootstrap notify'
+},{
+	// settings
+	delay: 5000,
+	allow_dismiss: true,
+	type: 'success',
+	animate: {
+		enter: 'animated fadeInDown',
+		exit: 'animated fadeOutUp'
+	},
+});
+$.notify({
+	// options
+	icon: 'dw dw-bell',
+	title: 'Bootstrap notify'
+},{
+	// settings
+	delay: 6000,
+	allow_dismiss: true,
+	type: 'warning',
+	animate: {
+		enter: 'animated fadeInDown',
+		exit: 'animated fadeOutUp'
+	},
+});
+$.notify({
+	// options
+	icon: 'dw dw-bell',
+	title: 'Bootstrap notify'
+},{
+	// settings
+	delay: 7000,
+	allow_dismiss: true,
+	type: 'danger',
+	animate: {
+		enter: 'animated fadeInDown',
+		exit: 'animated fadeOutUp'
+	},
+});
+$.notify({
+	// options
+	icon: 'dw dw-bell',
+	title: 'Bootstrap notify'
+},{
+	// settings
+	delay: 8000,
+	allow_dismiss: true,
+	type: 'primary',
+	animate: {
+		enter: 'animated fadeInDown',
+		exit: 'animated fadeOutUp'
+	},
+});

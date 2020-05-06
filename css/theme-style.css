@@ -3853,3 +3853,73 @@ table.dataTable.no-footer {
   .make-offer-modal .md-content textarea {
     max-height: 90px;
     resize: none; }
+
+.error-box {
+  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 1.5rem;
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 1100px;
+  padding: 2.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .error-box:last-child {
+    margin-bottom: 0; }
+  .error-box > * {
+    margin-right: 1.5rem; }
+    .error-box > *:last-child {
+      margin-right: 0; }
+  .error-box > .icon-side {
+    min-width: 200px; }
+  .error-box > .content-side {
+    max-width: -webkit-calc(100% - 200px - 1.5rem);
+    max-width: calc(100% - 200px - 1.5rem);
+    width: 100%; }
+    .error-box > .content-side > h3 {
+      margin: 0px 0px 1rem;
+      font-family: "Okta Neue", sans-serif;
+      font-weight: 500;
+      line-height: 1.4;
+      font-size: 36px;
+      color: #222; }
+    .error-box > .content-side > p {
+      margin: 0px 0px 0px;
+      font-family: "Okta Neue", sans-serif;
+      line-height: 29px;
+      font-size: 18px;
+      color: #848484; }
+
+.alert {
+  padding: 0.8rem 4rem 0.8rem 1.5rem;
+  background-color: #d33;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  line-height: 29px;
+  font-size: 18px;
+  color: #fff; }
+  .alert.alert-danger {
+    background-color: #dd3333; }
+  .alert.alert-success {
+    background-color: #0AB65A; }
+  .alert.alert-warning {
+    background-color: #F18401; }
+  .alert.alert-primary {
+    background-color: #848484; }
+  .alert .close {
+    background-color: transparent;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 1rem !important;
+    top: 50% !important;
+    font-size: 2.2rem;
+    border: none;
+    color: #fff;
+    padding: 0; }
